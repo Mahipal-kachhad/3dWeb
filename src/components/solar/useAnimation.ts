@@ -32,7 +32,8 @@ const useAnimation = (
   dir1Ref: RefObject<DirectionalLight>,
   handGlowRef: RefObject<Mesh>,
   p1Ref: RefObject<PointLight>,
-  p2Ref: RefObject<PointLight>
+  p2Ref: RefObject<PointLight>,
+  backRef: RefObject<Mesh>
 ) => {
   const tl = gsap.timeline({ paused: true });
   camera.layers.enable(4);
@@ -87,7 +88,7 @@ const useAnimation = (
       tl.to(camera.position, { z: 26.2, ease: "power2.inOut", duration: 4 });
       tl.to(
         groupRef.current.rotation,
-        { z: Math.PI * 0.09, duration: 4, ease: "power2.inOut" },
+        { z: Math.PI * 0.05, duration: 4, ease: "power2.inOut" },
         "<"
       );
       tl.to(

@@ -16,7 +16,7 @@ const Son = (props: JSX.IntrinsicElements["mesh"]) => {
       <sphereGeometry args={[0.05, 32, 32]} />
       <meshStandardMaterial
         color={"orange"}
-        emissiveIntensity={4}
+        emissiveIntensity={9}
         emissive={"orange"}
       />
     </mesh>

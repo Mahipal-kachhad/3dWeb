@@ -8,8 +8,6 @@ const Earth = (props: JSX.IntrinsicElements["mesh"]) => {
   useEffect(() => {
     scene.traverse((child) => {
       if (child instanceof THREE.Mesh && child.material) {
-        child.material.emissive = new THREE.Color(0x222233);
-        child.material.emissiveIntensity = 2;
         child.material.roughness = 0.8;
         child.material.needsUpdate = true;
       }
