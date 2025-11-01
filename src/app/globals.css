@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 821px) and (max-width: 1021px) {
+  .icon {
+    height: 26px !important;
+  }
+  .icon2 {
+    height: 24px !important;
+  }
+  .icon3 {
+    height: 24px !important;
+  }
+  .icon4 {
+    height: 24px !important;
+  }
+  .event {
+    padding-top: 10;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 820px) {
+  .icon {
+    height: 23px !important;
+  }
+  .icon2 {
+    height: 21px !important;
+  }
+  .icon3 {
+    height: 21px !important;
+  }
+  .icon4 {
+    height: 21px !important;
+  }
+  .event {
+    padding-top: 10;
+  }
+}
