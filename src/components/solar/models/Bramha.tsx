@@ -10,6 +10,7 @@ const Bramha = (props: JSX.IntrinsicElements["mesh"]) => {
         child.material.metalness = 0.1;
         child.material.roughness = 0.7;
         child.material.transparent = true;
+        child.material.side = THREE.DoubleSide;
         child.material.needsUpdate = true;
       }
     });

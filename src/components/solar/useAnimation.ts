@@ -33,7 +33,10 @@ const useAnimation = (
   handGlowRef: RefObject<Mesh>,
   p1Ref: RefObject<PointLight>,
   p2Ref: RefObject<PointLight>,
-  backRef: RefObject<Mesh>
+  p3Ref: RefObject<PointLight>,
+  rays1Ref: RefObject<Mesh>,
+  rays2Ref: RefObject<Mesh>,
+  rays3Ref: RefObject<Mesh>
 ) => {
   const tl = gsap.timeline({ paused: true });
   camera.layers.enable(4);
@@ -85,10 +88,10 @@ const useAnimation = (
       });
       gsap.set(camera.position, { z: 0.12 });
 
-      tl.to(camera.position, { z: 26.2, ease: "power2.inOut", duration: 4 });
+      tl.to(camera.position, { z: 26.2, ease: "power2.in", duration: 4 });
       tl.to(
         groupRef.current.rotation,
-        { z: Math.PI * 0.05, duration: 4, ease: "power2.inOut" },
+        { z: Math.PI * 0.05, duration: 4, ease: "power2.in" },
         "<"
       );
       tl.to(
@@ -96,7 +99,7 @@ const useAnimation = (
         {
           y: `+=${Math.PI * 1.5}`,
           duration: 4,
-          ease: "power1.inOut",
+          ease: "power1.in",
         },
         "<"
       );
@@ -164,7 +167,7 @@ const useAnimation = (
         {
           x: 0.35,
           y: 0.35,
-          duration: 2,
+          duration: 1,
           ease: "power2.Out",
         },
         "<"
@@ -172,7 +175,7 @@ const useAnimation = (
         circle.material,
         {
           opacity: 1,
-          duration: 2,
+          duration: 1,
           ease: "power2.Out",
         },
         "<"
@@ -183,16 +186,16 @@ const useAnimation = (
         {
           x: 1.2,
           y: 1.2,
-          duration: 2,
-          ease: "power2.inOut",
+          duration: 1.5,
+          ease: "power2.Out",
         },
         "-=1.5"
       ).to(
         burst.material,
         {
           opacity: 1,
-          duration: 2,
-          ease: "power2.inOut",
+          duration: 1.5,
+          ease: "power2.Out",
         },
         "<"
       );
@@ -205,6 +208,11 @@ const useAnimation = (
       tl.to(
         p2Ref.current,
         { intensity: 0.4, duration: 1, ease: "power1.inOut" },
+        "<"
+      );
+      tl.to(
+        p3Ref.current,
+        { intensity: 0.05, ease: "power1.inOut", duration: 1 },
         "<"
       );
       tl.to(

@@ -1,4 +1,4 @@
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls, useHelper } from "@react-three/drei";
 import Earth from "./models/Earth";
 import Moon from "./models/Moon";
 import { useThree } from "@react-three/fiber";
@@ -6,7 +6,7 @@ import useAnimation from "./useAnimation";
 import { useGSAP } from "@gsap/react";
 import gsap, { DOMTarget } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import Son from "./models/Son";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
@@ -50,8 +50,12 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
   const handGlowRef = useRef<THREE.Mesh>(null!);
   const p1Ref = useRef<THREE.PointLight>(null!);
   const p2Ref = useRef<THREE.PointLight>(null!);
-  const backRef = useRef<THREE.Mesh>(null!);
-  
+  const p3Ref = useRef<THREE.PointLight>(null!);
+  const rays1Ref = useRef<THREE.Mesh>(null!);
+  const rays2Ref = useRef<THREE.Mesh>(null!);
+  const rays3Ref = useRef<THREE.Mesh>(null!);
+  const [isBloom, setBloom] = useState<Boolean>(false);
+
   const animationTl = useAnimation(
     camera,
     earthRef,
@@ -72,7 +76,10 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
     handGlowRef,
     p1Ref,
     p2Ref,
-    backRef
+    p3Ref,
+    rays1Ref,
+    rays2Ref,
+    rays3Ref
   );
 
   useGSAP(
@@ -87,6 +94,16 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
         scrub: 1.5,
         start: "top top",
         end: "bottom bottom",
+      });
+
+      ScrollTrigger.create({
+        trigger: "#animation-trigger",
+        scroller: scroller,
+
+        start: "0 center",
+        end: "34% center",
+
+        onToggle: (self) => setBloom(self.isActive),
       });
     },
     { dependencies: [animationTl] }
@@ -138,6 +155,13 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
         decay={3}
         ref={p2Ref}
       />
+      <pointLight
+        position={[0, 1.3, 30.7]}
+        intensity={0}
+        decay={3}
+        ref={p3Ref}
+      />
+
       <mesh>
         <Shivji
           ref={shivaRef}
@@ -173,16 +197,19 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
         />
       </mesh>
       <Rays1
+        ref={rays1Ref}
         position={[0.11, 0.11, 30.22]}
         scale={0.4}
         rotation={[1.1, 0, -0.12]}
       />
       <Rays3
+        ref={rays2Ref}
         position={[-0.48, -0.02, 30.25]}
         scale={0.75}
         rotation={[0, Math.PI - 0.6, 0]}
       />
       <Rays2
+        ref={rays3Ref}
         position={[0.595, 0.09, 30.28]}
         scale={0.57}
         rotation={[0, Math.PI + 0.8, -0.03]}
@@ -190,9 +217,11 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
 
       {/* <Environment files={"/earth/star.hdr"} background/> */}
       {/* <Background position={[0, 0, 0]} scale={30} ref={backRef}/> */}
-      {/* <EffectComposer>
-        <Bloom luminanceThreshold={4} intensity={7} radius={0.7} mipmapBlur />
-        </EffectComposer> */}
+      {/* {isBloom && (
+        <EffectComposer>
+          <Bloom luminanceThreshold={4} intensity={7} radius={0.7} mipmapBlur />
+        </EffectComposer>
+      )} */}
     </>
   );
 };

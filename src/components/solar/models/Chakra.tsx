@@ -13,6 +13,8 @@ const Chakra = (props: JSX.IntrinsicElements["mesh"]) => {
         material.needsUpdate = true;
         material.transparent = true;
         material.opacity = 0;
+        material.emissive.set("orange");
+        material.emissiveIntensity = 0.4;
         material.color.set("orange");
       }
     });

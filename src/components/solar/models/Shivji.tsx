@@ -10,8 +10,9 @@ const Shivji = (props: JSX.IntrinsicElements["mesh"]) => {
         const material = child.material as THREE.MeshStandardMaterial;
         material.metalness = 0.1;
         material.roughness = 0.7;
+        material.transparent = true;
+        material.side = THREE.DoubleSide;
         material.needsUpdate = true;
-        material.transparent =true;
       }
     });
   }, [scene]);

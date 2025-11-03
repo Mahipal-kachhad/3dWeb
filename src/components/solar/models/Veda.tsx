@@ -10,10 +10,12 @@ const Veda = (props: JSX.IntrinsicElements["mesh"]) => {
         const material = child.material as THREE.MeshStandardMaterial;
         material.metalness = 0.1;
         material.roughness = 0.7;
-        material.needsUpdate = true;
         material.transparent = true;
         material.opacity = 0;
+        material.emissive.set("orange");
+        material.emissiveIntensity = 0.4;
         material.color.set("orange");
+        material.needsUpdate = true;
       }
     });
   }, [scene]);
