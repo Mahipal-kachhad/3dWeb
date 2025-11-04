@@ -63,7 +63,7 @@ const AboutMVTY = () => {
   };
 
   return (
-    <div className="mt-9 sm:mt-15 sm:pt-15 pb-5">
+    <div className="sm:pt-15 pb-5">
       <motion.h1
         className="text-3xl lg:text-[2.5rem] xl:text-[3.4rem] font-bold sm:w-[85vw] max-w-6xl mx-auto uppercase text-center text-[#ff8127]"
         {...fadeUp()}

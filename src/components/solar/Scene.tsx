@@ -26,9 +26,11 @@ import HandGlow from "./models/HandGlow";
 import Background from "./models/Background";
 import BlackFade from "./effects/BlackFade";
 import Rays from "./effects/Rays";
+import { useRouter } from "next/navigation";
 
 const Scene = ({ scroller }: { scroller: DOMTarget }) => {
   const { camera } = useThree();
+  const router = useRouter();
   const earthRef = useRef<THREE.Group>(null!);
   const moonRef = useRef<THREE.Mesh>(null!);
   const nebulaRef = useRef<THREE.Group>(null!);
@@ -54,6 +56,7 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
   const rays2Ref = useRef<THREE.Mesh>(null!);
   const rays3Ref = useRef<THREE.Mesh>(null!);
   const backRef = useRef<THREE.Mesh>(null!);
+  const hasNavigated = useRef(false);
   const [isBloom, setBloom] = useState<Boolean>(false);
 
   const animationTl = useAnimation(
@@ -97,13 +100,21 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
         scrub: 1.5,
         start: "top top",
         end: "bottom bottom",
+        onUpdate: (self) => {
+          if (self.progress > 0.99 && !hasNavigated.current) {
+            hasNavigated.current = true;
+            setTimeout(() => {
+              router.push("/dham");
+            }, 500);
+          }
+        },
       });
 
       ScrollTrigger.create({
         trigger: "#animation-trigger",
         scroller: scroller,
         start: "0 center",
-        end: "39.4% center",
+        end: "40% center",
         onToggle: (self) => setBloom(self.isActive),
       });
     },
@@ -224,7 +235,7 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
       <Background position={[0, 0, 0]} scale={30} ref={backRef} />
       {isBloom && (
         <EffectComposer>
-          <Bloom luminanceThreshold={4} intensity={7} radius={0.7} mipmapBlur />
+          <Bloom luminanceThreshold={2} intensity={7} radius={0.7} mipmapBlur />
         </EffectComposer>
       )}
     </>

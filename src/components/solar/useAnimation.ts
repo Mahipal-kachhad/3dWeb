@@ -234,7 +234,7 @@ const useAnimation = (
       tl.to(
         headGlow.material,
         {
-          opacity: 0.25,
+          opacity: 0.2,
           duration: 0.7,
           ease: "power1.in",
         },
@@ -242,7 +242,7 @@ const useAnimation = (
       );
       tl.to(materials, { opacity: 1, duration: 0.5, ease: "power1.inOut" });
       tl.to(handGlow.material, {
-        opacity: 1,
+        opacity: 0.37,
         duration: 1,
         ease: "power1.in",
       });
@@ -329,18 +329,18 @@ const useAnimation = (
       );
       tl.to([p1Ref.current, p2Ref.current, p3Ref.current, dir1Ref.current], {
         intensity: 0,
-        duration: 1,
+        duration: 0.5,
         ease: "power1.in",
       });
 
       tl.to(
         [burst.material, circle.material, handGlow.material, headGlow.material],
-        { opacity: 0, duration: 1, ease: "power1.in" },
+        { opacity: 0, duration: 0.5, ease: "power1.in" },
         "<"
       );
       tl.to(
         shaktiMaterial,
-        { emissiveIntensity: 0, duration: 1, ease: "power1.in" },
+        { emissiveIntensity: 0, duration: 0.5, ease: "power1.in" },
         "<"
       );
     },

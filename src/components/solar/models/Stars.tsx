@@ -75,6 +75,7 @@ const PremiumShaderStars = (props: JSX.IntrinsicElements["points"]) => {
         map={starTexture}
         color={WHITE_COLOR}
         size={0.06}
+        opacity={0.7}
         sizeAttenuation={true}
         transparent={true}
         alphaTest={0.01}
