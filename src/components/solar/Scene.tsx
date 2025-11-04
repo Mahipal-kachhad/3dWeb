@@ -25,7 +25,8 @@ import Vishnu from "./models/Vishnu";
 import HandGlow from "./models/HandGlow";
 import Background from "./models/Background";
 import BlackFade from "./effects/BlackFade";
-import Rays4 from "./effects/Rays4";
+import Rays from "./effects/Rays";
+import { OrbitControls } from "@react-three/drei";
 
 const Scene = ({ scroller }: { scroller: DOMTarget }) => {
   const { camera } = useThree();
@@ -46,6 +47,7 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
   const amb1Ref = useRef<THREE.AmbientLight>(null!);
   const dir1Ref = useRef<THREE.DirectionalLight>(null!);
   const handGlowRef = useRef<THREE.Mesh>(null!);
+  const headGlowRef = useRef<THREE.Mesh>(null!);
   const p1Ref = useRef<THREE.PointLight>(null!);
   const p2Ref = useRef<THREE.PointLight>(null!);
   const p3Ref = useRef<THREE.PointLight>(null!);
@@ -80,7 +82,8 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
     rays1Ref,
     rays2Ref,
     rays3Ref,
-    backRef
+    backRef,
+    headGlowRef
   );
 
   useGSAP(
@@ -102,7 +105,7 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
         scroller: scroller,
 
         start: "0 center",
-        end: "34% center",
+        end: "39.4% center",
 
         onToggle: (self) => setBloom(self.isActive),
       });
@@ -112,6 +115,7 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
 
   return (
     <>
+      {/* <OrbitControls /> */}
       <group ref={groupRef} layers={0}>
         <pointLight
           intensity={5}
@@ -195,23 +199,30 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
           rotation-y={Math.PI}
         />
       </mesh>
-      <Rays4
+      <Rays
         ref={rays1Ref}
         position={[0.18, 0.34, 30.71]}
         scale={0}
         rotation={[1.1, 0, -0.12]}
       />
-      <Rays4
+      <Rays
         ref={rays2Ref}
         position={[0.18, 0.34, 30.71]}
         scale={0}
-        rotation={[0, Math.PI + 0.8, -1.25]}
+        rotation={[0, Math.PI + 0.8, -1.3]}
       />
-      <Rays4
+      <Rays
         ref={rays3Ref}
         position={[0.18, 0.34, 30.71]}
         scale={0}
-        rotation={[0, Math.PI - 0.6, 1.25]}
+        rotation={[0, Math.PI - 0.6, 1.27]}
+      />
+
+      <HandGlow
+        ref={headGlowRef}
+        scale={0.9}
+        position={[0, 0.72, 30.7]}
+        rotation-y={Math.PI}
       />
 
       <Background position={[0, 0, 0]} scale={30} ref={backRef} />

@@ -21,8 +21,8 @@ import { Toaster } from "react-hot-toast";
 export default function Home() {
   return (
     <>
-      <System />
-      {/* <div className="bg-[#1D1D1F] min-h-screen">
+      {/* <System /> */}
+      <div className="bg-[#1D1D1F] min-h-screen">
         <AboutMVTY />
         <MaaVishvambhari />
         <GlimpsOfMaa />
@@ -40,7 +40,7 @@ export default function Home() {
         <Contact />
         <Footer />
         <Toaster position="top-center" reverseOrder={false} />
-      </div> */}
+      </div>
     </>
   );
 }

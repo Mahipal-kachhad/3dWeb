@@ -3,8 +3,8 @@ import { JSX, useMemo } from "react";
 import { TextureLoader } from "three";
 import * as THREE from "three";
 
-const Rays4 = (props: JSX.IntrinsicElements["mesh"]) => {
-  const nebulaTexture = useLoader(TextureLoader, "/earth/rays4.png");
+const Rays = (props: JSX.IntrinsicElements["mesh"]) => {
+  const nebulaTexture = useLoader(TextureLoader, "/earth/rays5.png");
 
   useMemo(() => {
     nebulaTexture.colorSpace = THREE.SRGBColorSpace;
@@ -16,8 +16,8 @@ const Rays4 = (props: JSX.IntrinsicElements["mesh"]) => {
   }, [nebulaTexture]);
 
   const geometry = useMemo(() => {
-    const geo = new THREE.PlaneGeometry(1, 2.667);
-    geo.translate(0, -2.667 / 2, 0);
+    const geo = new THREE.PlaneGeometry(1, 4.21);
+    geo.translate(0, -4.21 / 2, 0);
     return geo;
   }, []);
 
@@ -36,4 +36,4 @@ const Rays4 = (props: JSX.IntrinsicElements["mesh"]) => {
   );
 };
 
-export default Rays4;
+export default Rays;

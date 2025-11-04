@@ -1,6 +1,6 @@
-import { useRef, type JSX } from "react";
+import { type JSX } from "react";
 import * as THREE from "three";
-import { useFrame, useLoader } from "@react-three/fiber";
+import { useLoader } from "@react-three/fiber";
 
 const HandGlow = (props: JSX.IntrinsicElements["group"]) => {
   const burstTexture = useLoader(THREE.TextureLoader, "/earth/handGlow.png");

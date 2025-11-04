@@ -38,7 +38,8 @@ const useAnimation = (
   rays1Ref: RefObject<Mesh>,
   rays2Ref: RefObject<Mesh>,
   rays3Ref: RefObject<Mesh>,
-  backRef: RefObject<Mesh>
+  backRef: RefObject<Mesh>,
+  headGlowRef: RefObject<Mesh>
 ) => {
   const tl = gsap.timeline({ paused: true });
   camera.layers.enable(4);
@@ -48,6 +49,7 @@ const useAnimation = (
     () => {
       const [burst, circle] = AuraRef.current.children as Mesh[];
       const [handGlow] = handGlowRef.current.children as Mesh[];
+      const [headGlow] = headGlowRef.current.children as Mesh[];
       const models = [bramha.current, vishnu.current, shiva.current];
       const materials: Material[] = [];
       models.forEach((model) => {
@@ -108,7 +110,7 @@ const useAnimation = (
       tl.to(camera.position, { z: 26.2, ease: "power2.in", duration: 4 });
       tl.to(
         groupRef.current.rotation,
-        { z: Math.PI * 0.05, duration: 4, ease: "power2.in" },
+        { z: Math.PI * 0.042, duration: 4, ease: "power2.in" },
         "<"
       );
       tl.to(
@@ -142,7 +144,7 @@ const useAnimation = (
             duration: 2,
             ease: "power2.in",
           },
-          "-=3"
+          "-=2"
         );
 
         tl.to(
@@ -154,29 +156,13 @@ const useAnimation = (
           },
           "<"
         );
-
-        tl.to(vignetteStrength, {
-          value: 10.0,
-          duration: 2,
-          ease: "power2.in",
-        });
-
-        tl.to(
-          vignetteShrink,
-          {
-            value: 1.0,
-            duration: 2,
-            ease: "power2.in",
-          },
-          "<"
-        );
         tl.to(
           plainRef.current.material,
           { opacity: 1, duration: 1, ease: "power1.in" },
-          "-=3"
+          "-=1"
         );
       }
-      tl.set(amb1Ref.current, { intensity: 0 }, "-=2");
+      tl.set(amb1Ref.current, { intensity: 0 });
       tl.set(dir1Ref.current, { intensity: 0 }, "<");
       tl.set(backMaterial, { opacity: 0 }, "<");
       tl.set(
@@ -214,7 +200,7 @@ const useAnimation = (
           duration: 1.5,
           ease: "power2.Out",
         },
-        "-=1.5"
+        "-=1"
       ).to(
         burst.material,
         {
@@ -227,22 +213,31 @@ const useAnimation = (
 
       tl.to(p1Ref.current, {
         intensity: 0.9,
-        duration: 1,
-        ease: "power1.inOut",
+        duration: 0.7,
+        ease: "power1.in",
       });
       tl.to(
         p2Ref.current,
-        { intensity: 0.4, duration: 1, ease: "power1.inOut" },
+        { intensity: 0.4, duration: 0.7, ease: "power1.in" },
         "<"
       );
       tl.to(
         p3Ref.current,
-        { intensity: 0.07, ease: "power1.inOut", duration: 1 },
+        { intensity: 0.07, ease: "power1.in", duration: 0.7 },
         "<"
       );
       tl.to(
         dir1Ref.current,
-        { intensity: 0.1, duration: 1, ease: "power1.inOut" },
+        { intensity: 0.1, duration: 0.7, ease: "power1.in" },
+        "<"
+      );
+      tl.to(
+        headGlow.material,
+        {
+          opacity: 0.25,
+          duration: 0.7,
+          ease: "power1.in",
+        },
         "<"
       );
       tl.to(materials, { opacity: 1, duration: 0.5, ease: "power1.inOut" });
@@ -263,8 +258,8 @@ const useAnimation = (
       tl.to(
         rays1Ref.current.scale,
         {
-          x: 0.43,
-          y: 0.43,
+          x: 0.27,
+          y: 0.27,
           duration: 1,
           ease: "power1.inOut",
         },
@@ -273,8 +268,8 @@ const useAnimation = (
       tl.to(
         rays2Ref.current.scale,
         {
-          x: 0.43,
-          y: 0.43,
+          x: 0.27,
+          y: 0.27,
           duration: 1,
           ease: "power1.inOut",
         },
@@ -283,8 +278,8 @@ const useAnimation = (
       tl.to(
         rays3Ref.current.scale,
         {
-          x: 0.53,
-          y: 0.53,
+          x: 0.37,
+          y: 0.37,
           duration: 1,
           ease: "power1.inOut",
         },
@@ -339,7 +334,7 @@ const useAnimation = (
       });
 
       tl.to(
-        [burst.material, circle.material, handGlow.material],
+        [burst.material, circle.material, handGlow.material, headGlow.material],
         { opacity: 0, duration: 1, ease: "power1.in" },
         "<"
       );
