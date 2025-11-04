@@ -39,7 +39,6 @@ const useAnimation = (
   rays2Ref: RefObject<Mesh>,
   rays3Ref: RefObject<Mesh>,
   backRef: RefObject<Mesh>,
-  headGlowRef: RefObject<Mesh>
 ) => {
   const tl = gsap.timeline({ paused: true });
   camera.layers.enable(4);
@@ -49,7 +48,6 @@ const useAnimation = (
     () => {
       const [burst, circle] = AuraRef.current.children as Mesh[];
       const [handGlow] = handGlowRef.current.children as Mesh[];
-      const [headGlow] = headGlowRef.current.children as Mesh[];
       const models = [bramha.current, vishnu.current, shiva.current];
       const materials: Material[] = [];
       models.forEach((model) => {
@@ -231,15 +229,6 @@ const useAnimation = (
         { intensity: 0.1, duration: 0.7, ease: "power1.in" },
         "<"
       );
-      tl.to(
-        headGlow.material,
-        {
-          opacity: 0.2,
-          duration: 0.7,
-          ease: "power1.in",
-        },
-        "<"
-      );
       tl.to(materials, { opacity: 1, duration: 0.5, ease: "power1.inOut" });
       tl.to(handGlow.material, {
         opacity: 0.37,
@@ -268,8 +257,8 @@ const useAnimation = (
       tl.to(
         rays2Ref.current.scale,
         {
-          x: 0.27,
-          y: 0.27,
+          x: 0.3,
+          y: 0.3,
           duration: 1,
           ease: "power1.inOut",
         },
@@ -278,8 +267,8 @@ const useAnimation = (
       tl.to(
         rays3Ref.current.scale,
         {
-          x: 0.37,
-          y: 0.37,
+          x: 0.38,
+          y: 0.38,
           duration: 1,
           ease: "power1.inOut",
         },
@@ -334,7 +323,7 @@ const useAnimation = (
       });
 
       tl.to(
-        [burst.material, circle.material, handGlow.material, headGlow.material],
+        [burst.material, circle.material, handGlow.material],
         { opacity: 0, duration: 0.5, ease: "power1.in" },
         "<"
       );

@@ -5,7 +5,7 @@ import useAnimation from "./useAnimation";
 import { useGSAP } from "@gsap/react";
 import gsap, { DOMTarget } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import * as THREE from "three";
 import Son from "./models/Son";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
@@ -48,7 +48,6 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
   const amb1Ref = useRef<THREE.AmbientLight>(null!);
   const dir1Ref = useRef<THREE.DirectionalLight>(null!);
   const handGlowRef = useRef<THREE.Mesh>(null!);
-  const headGlowRef = useRef<THREE.Mesh>(null!);
   const p1Ref = useRef<THREE.PointLight>(null!);
   const p2Ref = useRef<THREE.PointLight>(null!);
   const p3Ref = useRef<THREE.PointLight>(null!);
@@ -85,7 +84,6 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
     rays2Ref,
     rays3Ref,
     backRef,
-    headGlowRef
   );
 
   useGSAP(
@@ -223,13 +221,6 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
         position={[0.18, 0.34, 30.71]}
         scale={0}
         rotation={[0, Math.PI - 0.6, 1.27]}
-      />
-
-      <HandGlow
-        ref={headGlowRef}
-        scale={0.9}
-        position={[0, 0.72, 30.7]}
-        rotation-y={Math.PI}
       />
 
       <Background position={[0, 0, 0]} scale={30} ref={backRef} />
