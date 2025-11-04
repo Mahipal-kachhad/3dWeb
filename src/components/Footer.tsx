@@ -4,8 +4,8 @@ import { MdLocationPin } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="bg-black border-t-1 border-t-white/10">
-      <div className="flex flex-col sm:flex-row gap-7 w-[90vw] lg:items-center xl:items-start max-w-7xl mx-auto mt-10 pb-5 sm:pb-15 border-b-1 border-b-white/10 ">
+    <footer className="bg-black border-t border-t-white/10">
+      <div className="flex flex-col sm:flex-row gap-7 w-[90vw] lg:items-center xl:items-start max-w-7xl mx-auto mt-10 pb-5 sm:pb-15 border-b border-b-white/10 ">
         <div className="hidden sm:block w-full lg:w-9/10 pt-5">
           <div className="flex gap-5 items-center lg:w-full lg:items-end -mb-1 -mt-5">
             <img
@@ -84,7 +84,7 @@ const Footer = () => {
             Our Pillars
           </a>
         </div>
-        <div className="w-full sm:w-md ps-10 sm:!p-0">
+        <div className="w-full sm:w-md ps-10 sm:p-0!">
           <h3 className="text-xl font-bold mb-3 text-md lg:text-lg xl:text-xl text-[#ff8127] uppercase">
             Contact info
           </h3>

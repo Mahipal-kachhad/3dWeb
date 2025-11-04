@@ -8,7 +8,7 @@ const Darshan = () => {
           </h2>
 
           <ul className="space-y-6 text-neutral-100 sm:hidden xl:block">
-            <li className="border-b-1 border-b-white/15 pb-4">
+            <li className="border-b border-b-white/15 pb-4">
               <p className="font-semibold text-[1.1rem] sm:text-[0.8rem] lg:text-lg">
                 What is the daily darshan time schedule?
               </p>
@@ -21,7 +21,7 @@ const Darshan = () => {
                 </li>
               </ul>
             </li>
-            <li className="border-b-1 border-b-white/15 pb-4">
+            <li className="border-b border-b-white/15 pb-4">
               <p className="font-semibold text-[1.1rem] sm:text-[0.8rem] lg:text-lg">
                 What is the Himalaya darshan closing time?
               </p>
@@ -38,7 +38,7 @@ const Darshan = () => {
 
 
           <ul className="text-neutral-100 hidden sm:flex flex-row xl:hidden">
-            <li className="border-e-1 border-e-white me-4 lg:me-10 flex-1 pe-1">
+            <li className="border-e border-e-white me-4 lg:me-10 flex-1 pe-1">
               <p className="font-semibold text-[1rem]">
                 What is the daily darshan time schedule?
               </p>
@@ -51,7 +51,7 @@ const Darshan = () => {
                 </li>
               </ul>
             </li>
-            <li className="border-e-1 border-e-white me-4 lg:me-10 flex-1">
+            <li className="border-e border-e-white me-4 lg:me-10 flex-1">
               <p className="font-semibold text-[1rem]">
                 What is the Himalaya darshan closing time?
               </p>

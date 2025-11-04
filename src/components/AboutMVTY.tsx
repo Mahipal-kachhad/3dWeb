@@ -99,7 +99,7 @@ const AboutMVTY = () => {
           {images.map((val, idx) => (
             <SwiperSlide
               key={idx}
-              className="w-[80vw]! h-[130vw]! bg-black sm:w-[65vw]! sm:h-[39vw]! flex items-center justify-center rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[3.3rem] overflow-hidden object-cover object-center"
+              className="w-[80vw]! h-[130vw]! bg-black sm:w-[65vw]! sm:h-[39vw]! flex items-center justify-center rounded-3xl sm:rounded-4xl lg:rounded-[3.3rem] overflow-hidden object-cover object-center"
             >
               <img
                 src={val.url}
@@ -120,7 +120,7 @@ const AboutMVTY = () => {
             {isPlaying ? <FaPause /> : <FaPlay />}
           </button>
           <div
-            className="p-6 rounded-full gap-[16px] about-mvty-pagination flex items-center bg-[rgba(42,42,45,0.72)] backdrop-blur-md text-[#b3b3b3] font-medium  transition !w-fit"
+            className="p-6 rounded-full gap-4 about-mvty-pagination flex items-center bg-[rgba(42,42,45,0.72)] backdrop-blur-md text-[#b3b3b3] font-medium  transition w-fit!"
             ref={paginationRef}
           />
         </div>

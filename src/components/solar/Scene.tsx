@@ -26,7 +26,6 @@ import HandGlow from "./models/HandGlow";
 import Background from "./models/Background";
 import BlackFade from "./effects/BlackFade";
 import Rays from "./effects/Rays";
-import { OrbitControls } from "@react-three/drei";
 
 const Scene = ({ scroller }: { scroller: DOMTarget }) => {
   const { camera } = useThree();
@@ -103,10 +102,8 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
       ScrollTrigger.create({
         trigger: "#animation-trigger",
         scroller: scroller,
-
         start: "0 center",
         end: "39.4% center",
-
         onToggle: (self) => setBloom(self.isActive),
       });
     },
@@ -115,7 +112,6 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
 
   return (
     <>
-      {/* <OrbitControls /> */}
       <group ref={groupRef} layers={0}>
         <pointLight
           intensity={5}

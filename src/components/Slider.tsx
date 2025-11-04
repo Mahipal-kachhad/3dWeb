@@ -18,12 +18,12 @@ const Slider = ({ images }: { images: { url: string }[] }) => {
         initialSlide={1}
         slidesPerView={"auto"}
         slidesPerGroup={1}
-        className="!pb-7"
+        className="pb-7!"
       >
         {images.map((img, idx) => (
           <SwiperSlide
             key={idx}
-            className="!w-[250px] lg:!w-[350px] rounded-3xl p-[1px] sm:p-[1.5px] bg-[linear-gradient(90deg,#fff_0%,#ff9000_24.47%,#fff_48.32%,#ff9000_72.17%,#fff_97.79%)] overflow-hidden aspect-square"
+            className="w-[250px]! lg:w-[350px]! rounded-3xl p-px sm:p-[1.5px] bg-[linear-gradient(90deg,#fff_0%,#ff9000_24.47%,#fff_48.32%,#ff9000_72.17%,#fff_97.79%)] overflow-hidden aspect-square"
           >
             <img
               src={img.url}

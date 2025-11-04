@@ -112,7 +112,7 @@ const DhamInfo = () => {
               className="rounded-2xl h-full"
             >
               {images.map((img, idx) => (
-                <SwiperSlide key={idx} className="!h-[200px] lg:!h-[250px] ">
+                <SwiperSlide key={idx} className="h-[200px]! lg:h-[250px]! ">
                   <img
                     src={img.url}
                     alt={`Gallery image ${idx + 1}`}

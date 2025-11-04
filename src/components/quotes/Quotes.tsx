@@ -34,12 +34,12 @@ const Quotes = () => {
         }}
         modules={[EffectCoverflow, Navigation]}
         ref={swiperRef}
-        className="!pt-15 !pb-20 sm:!pb-5 xl:!py-20"
+        className="pt-15! pb-20! sm:pb-5! xl:py-20!"
       >
         {items.map((card, idx) => (
           <SwiperSlide
             key={idx}
-            className="!w-[300px] lg:!w-[400px] rounded-lg cursor-grab active:cursor-grabbing"
+            className="w-[300px]! lg:w-[400px]! rounded-lg cursor-grab active:cursor-grabbing"
           >
             {({ isActive }) => (
               <div className="relative w-full h-full">

@@ -96,7 +96,7 @@ const Dham2 = () => {
                 className="h-[50vw]"
               >
                 {images.map((img, idx) => (
-                  <SwiperSlide key={idx} className="!w-[35vw] overflow-hidden rounded-2xl">
+                  <SwiperSlide key={idx} className="w-[35vw]! overflow-hidden rounded-2xl">
                     <img
                       src={img.url}
                       alt={`Gallery image ${idx + 1}`}

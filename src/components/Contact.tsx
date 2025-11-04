@@ -117,7 +117,7 @@ const Contact = () => {
           <div ref={divRef} className="origin-[top_center] w-[300px] mx-auto">
             <img src="/icons/bulb.png" alt="rays" />
           </div>
-          <div className="absolute -top-2 rounded-b-full w-[5px] h-[50px] border-1 border-white/20 left-1/2 -translate-x-1/2 " />
+          <div className="absolute -top-2 rounded-b-full w-[5px] h-[50px] border border-white/20 left-1/2 -translate-x-1/2 " />
         </div>
 
         <div className="w-full h-3/4 absolute bottom-0 left-1/2 -translate-x-1/2">
@@ -138,7 +138,7 @@ const Contact = () => {
                 onBlur={handleBlur}
                 value={data.name}
                 onChange={handleChange}
-                className="border-1 border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 ps-5 sm:ps-20  py-3 rounded-2xl"
+                className="border border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 ps-5 sm:ps-20  py-3 rounded-2xl"
                 type="text"
               />
               <input
@@ -148,7 +148,7 @@ const Contact = () => {
                 onFocus={() => handleFocus("email")}
                 onBlur={handleBlur}
                 onChange={handleChange}
-                className="border-1 border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 ps-5 sm:ps-20  py-3 rounded-2xl"
+                className="border border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 ps-5 sm:ps-20  py-3 rounded-2xl"
                 type="text"
               />
             </div>
@@ -162,14 +162,14 @@ const Contact = () => {
                 onChange={handleChange}
                 name="message"
                 rows={4}
-                className="border-1 border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 ps-5 sm:ps-20 pe-3 py-3 rounded-2xl"
+                className="border border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 ps-5 sm:ps-20 pe-3 py-3 rounded-2xl"
               ></textarea>
 
               <button
                 onMouseEnter={() => handleFocus("submit")}
                 onMouseLeave={handleBlur}
                 type="submit"
-                className="px-20 py-3 rounded-full cursor-pointer hover:bg-white/13 transition ease-in active:bg-white/5 bg-white/7 backdrop-blur-[5px] border-t-white/20 border-t-1 border-l-white/20 border-l-1 mx-auto block mt-5"
+                className="px-20 py-3 rounded-full cursor-pointer hover:bg-white/13 transition ease-in active:bg-white/5 bg-white/7 backdrop-blur-[5px] border-t-white/20 border-t border-l-white/20 border-l mx-auto block mt-5"
               >
                 Submit
               </button>

@@ -126,7 +126,7 @@ const Events = () => {
                           <p className="text-center xl:text-left py-3 sm:py-2 lg:py-3 text-[1.1rem] sm:text-[0.8rem]">
                             "Click below to join the event."
                           </p>
-                          <button className="px-7 py-2 mx-auto xl:mx-0 block text-[0.8rem] text-[#FF8127] font-bold rounded-full bg-[#ff8127]/10 hover:bg-[#ff8127]/20 active:bg-[#ff8127]/5 transition ease-in cursor-pointer border-t-1 border-t-white/20 border-l-1 border-l-white/20">
+                          <button className="px-7 py-2 mx-auto xl:mx-0 block text-[0.8rem] text-[#FF8127] font-bold rounded-full bg-[#ff8127]/10 hover:bg-[#ff8127]/20 active:bg-[#ff8127]/5 transition ease-in cursor-pointer border-t border-t-white/20 border-l border-l-white/20">
                             Participate
                           </button>
                           <div className="flex xl:block gap-3 items-center py-3 xl:py-0 mx-auto xl:mx-0 w-fit event">

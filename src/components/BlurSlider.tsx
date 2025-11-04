@@ -52,7 +52,7 @@ const BlurSlider = () => {
         {images.map((img, idx) => (
           <SwiperSlide
             key={idx}
-            className="!w-[95vw] !h-[60vw] sm:!w-[50vw] sm:!h-[30vw] overflow-hidden transition-all duration-500"
+            className="w-[95vw]! h-[60vw]! sm:w-[50vw]! sm:h-[30vw]! overflow-hidden transition-all duration-500"
           >
             {({ isActive }) => (
               <div
@@ -89,8 +89,8 @@ const BlurSlider = () => {
           <FiChevronRight className="w-5 h-5" />
         </button>
       </div>
-      <div className="hidden sm:block pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-black to-transparent z-10"></div>
-      <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-black to-transparent z-10"></div>
+      <div className="hidden sm:block pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r from-black to-transparent z-10"></div>
+      <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l from-black to-transparent z-10"></div>
     </div>
   );
 };
