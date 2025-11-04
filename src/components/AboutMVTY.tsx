@@ -10,11 +10,11 @@ import fadeUp from "./function";
 
 const AboutMVTY = () => {
   const [images, setImages] = useState([
-    { url: "/dham/maa10.png" },
-    { url: "/dham/maa11.png" },
+    { url: "/dham/maa10.jpg" },
+    { url: "/dham/maa11.jpg" },
     { url: "/dham/maa15.jpg" },
-    { url: "/dham/patr1.png" },
-    { url: "/dham/patr15.png" },
+    { url: "/dham/patr1.jpg" },
+    { url: "/dham/patr15.jpg" },
   ]);
 
   const imagesMobile = [
@@ -99,7 +99,7 @@ const AboutMVTY = () => {
           {images.map((val, idx) => (
             <SwiperSlide
               key={idx}
-              className="!w-[80vw] !h-[130vw] bg-black sm:!w-[65vw] sm:!h-[39vw] flex items-center justify-center rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[3.3rem] overflow-hidden object-cover object-center"
+              className="w-[80vw]! h-[130vw]! bg-black sm:w-[65vw]! sm:h-[39vw]! flex items-center justify-center rounded-[1.5rem] sm:rounded-[2rem] lg:rounded-[3.3rem] overflow-hidden object-cover object-center"
             >
               <img
                 src={val.url}

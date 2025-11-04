@@ -12,11 +12,11 @@ import Slider from "../Slider";
 
 const DhamInfo = () => {
   const [images, setImages] = useState<{ url: string }[]>([
-    { url: "/dham/maa10.png" },
-    { url: "/dham/maa11.png" },
+    { url: "/dham/maa10.jpg" },
+    { url: "/dham/maa11.jpg" },
     { url: "/dham/maa15.jpg" },
-    { url: "/dham/maa11.png" },
-    { url: "/dham/maa10.png" },
+    { url: "/dham/maa11.jpg" },
+    { url: "/dham/maa10.jpg" },
   ]);
 
   useEffect(() => {

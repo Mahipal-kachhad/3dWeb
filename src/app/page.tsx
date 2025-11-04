@@ -21,7 +21,7 @@ import { Toaster } from "react-hot-toast";
 export default function Home() {
   return (
     <>
-      {/* <System /> */}
+      <System />
       <div className="bg-[#1D1D1F] min-h-screen">
         <AboutMVTY />
         <MaaVishvambhari />

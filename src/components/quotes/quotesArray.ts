@@ -1,6 +1,6 @@
 const items = [
   {
-    imageSrc: "/dham/maa11.png",
+    imageSrc: "/dham/maa11.jpg",
     title: "1.",
     text: "તમારો દરેક શબ્દ પ્રાર્થના બને અને દરેક આચરણ યજ્ઞ બને એવું જીવન જીવો.",
     author: "શ્રી મહાપાત્ર",
@@ -12,13 +12,13 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa10.png",
+    imageSrc: "/dham/maa10.jpg",
     title: "3.",
     text: "ભક્તિ એ માર્ગ છે જ્યાં હૃદય શાંત અને આત્મા ઉજળી થાય.",
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/patr1.png",
+    imageSrc: "/dham/patr1.jpg",
     title: "4.",
     text: "કર્મમાં પ્રભુ, પ્રભુમાં કર્મ—એજ સાચી સાધના.",
     author: "શ્રી મહાપાત્ર",
@@ -30,7 +30,7 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa11.png",
+    imageSrc: "/dham/maa11.jpg",
     title: "6.",
     text: "તમારો દરેક શબ્દ પ્રાર્થના બને અને દરેક આચરણ યજ્ઞ બને એવું જીવન જીવો.",
     author: "શ્રી મહાપાત્ર",
@@ -42,13 +42,13 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa10.png",
+    imageSrc: "/dham/maa10.jpg",
     title: "8.",
     text: "ભક્તિ એ માર્ગ છે જ્યાં હૃદય શાંત અને આત્મા ઉજળી થાય.",
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/patr1.png",
+    imageSrc: "/dham/patr1.jpg",
     title: "9.",
     text: "કર્મમાં પ્રભુ, પ્રભુમાં કર્મ—એજ સાચી સાધના.",
     author: "શ્રી મહાપાત્ર",
@@ -60,7 +60,7 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa11.png",
+    imageSrc: "/dham/maa11.jpg",
     title: "11.",
     text: "તમારો દરેક શબ્દ પ્રાર્થના બને અને દરેક આચરણ યજ્ઞ બને એવું જીવન જીવો.",
     author: "શ્રી મહાપાત્ર",
@@ -72,13 +72,13 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa10.png",
+    imageSrc: "/dham/maa10.jpg",
     title: "13.",
     text: "ભક્તિ એ માર્ગ છે જ્યાં હૃદય શાંત અને આત્મા ઉજળી થાય.",
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/patr1.png",
+    imageSrc: "/dham/patr1.jpg",
     title: "14.",
     text: "કર્મમાં પ્રભુ, પ્રભુમાં કર્મ—એજ સાચી સાધના.",
     author: "શ્રી મહાપાત્ર",
@@ -90,7 +90,7 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa11.png",
+    imageSrc: "/dham/maa11.jpg",
     title: "16.",
     text: "તમારો દરેક શબ્દ પ્રાર્થના બને અને દરેક આચરણ યજ્ઞ બને એવું જીવન જીવો.",
     author: "શ્રી મહાપાત્ર",
@@ -102,13 +102,13 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa10.png",
+    imageSrc: "/dham/maa10.jpg",
     title: "18.",
     text: "ભક્તિ એ માર્ગ છે જ્યાં હૃદય શાંત અને આત્મા ઉજળી થાય.",
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/patr1.png",
+    imageSrc: "/dham/patr1.jpg",
     title: "19.",
     text: "કર્મમાં પ્રભુ, પ્રભુમાં કર્મ—એજ સાચી સાધના.",
     author: "શ્રી મહાપાત્ર",
@@ -120,7 +120,7 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa11.png",
+    imageSrc: "/dham/maa11.jpg",
     title: "21.",
     text: "તમારો દરેક શબ્દ પ્રાર્થના બને અને દરેક આચરણ યજ્ઞ બને એવું જીવન જીવો.",
     author: "શ્રી મહાપાત્ર",
@@ -132,13 +132,13 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa10.png",
+    imageSrc: "/dham/maa10.jpg",
     title: "23.",
     text: "ભક્તિ એ માર્ગ છે જ્યાં હૃદય શાંત અને આત્મા ઉજળી થાય.",
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/patr1.png",
+    imageSrc: "/dham/patr1.jpg",
     title: "24.",
     text: "કર્મમાં પ્રભુ, પ્રભુમાં કર્મ—એજ સાચી સાધના.",
     author: "શ્રી મહાપાત્ર",
@@ -150,7 +150,7 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa11.png",
+    imageSrc: "/dham/maa11.jpg",
     title: "26.",
     text: "તમારો દરેક શબ્દ પ્રાર્થના બને અને દરેક આચરણ યજ્ઞ બને એવું જીવન જીવો.",
     author: "શ્રી મહાપાત્ર",
@@ -162,13 +162,13 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa10.png",
+    imageSrc: "/dham/maa10.jpg",
     title: "28.",
     text: "ભક્તિ એ માર્ગ છે જ્યાં હૃદય શાંત અને આત્મા ઉજળી થાય.",
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/patr1.png",
+    imageSrc: "/dham/patr1.jpg",
     title: "29.",
     text: "કર્મમાં પ્રભુ, પ્રભુમાં કર્મ—એજ સાચી સાધના.",
     author: "શ્રી મહાપાત્ર",
@@ -180,7 +180,7 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa11.png",
+    imageSrc: "/dham/maa11.jpg",
     title: "31.",
     text: "તમારો દરેક શબ્દ પ્રાર્થના બને અને દરેક આચરણ યજ્ઞ બને એવું જીવન જીવો.",
     author: "શ્રી મહાપાત્ર",
@@ -192,13 +192,13 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa10.png",
+    imageSrc: "/dham/maa10.jpg",
     title: "33.",
     text: "ભક્તિ એ માર્ગ છે જ્યાં હૃદય શાંત અને આત્મા ઉજળી થાય.",
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/patr1.png",
+    imageSrc: "/dham/patr1.jpg",
     title: "34.",
     text: "કર્મમાં પ્રભુ, પ્રભુમાં કર્મ—એજ સાચી સાધના.",
     author: "શ્રી મહાપાત્ર",
@@ -210,7 +210,7 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa11.png",
+    imageSrc: "/dham/maa11.jpg",
     title: "36.",
     text: "તમારો દરેક શબ્દ પ્રાર્થના બને અને દરેક આચરણ યજ્ઞ બને એવું જીવન જીવો.",
     author: "શ્રી મહાપાત્ર",
@@ -222,13 +222,13 @@ const items = [
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/maa10.png",
+    imageSrc: "/dham/maa10.jpg",
     title: "38.",
     text: "ભક્તિ એ માર્ગ છે જ્યાં હૃદય શાંત અને આત્મા ઉજળી થાય.",
     author: "શ્રી મહાપાત્ર",
   },
   {
-    imageSrc: "/dham/patr1.png",
+    imageSrc: "/dham/patr1.jpg",
     title: "39.",
     text: "કર્મમાં પ્રભુ, પ્રભુમાં કર્મ—એજ સાચી સાધના.",
     author: "શ્રી મહાપાત્ર",

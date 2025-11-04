@@ -53,7 +53,7 @@ const VideoModel = () => {
       <div className="w-full h-fit sm:h-[370px] lg:h-[450px] xl:h-[580px] 2xl:h-screen sticky bottom-0 flex items-center justify-center overflow-hidden">
         <div className="w-9/10 sm:w-7/10 h-fit relative" ref={divRef}>
           <div className="w-full h-fit p-1">
-            <img src="/dham/dhamVideo.png" className="rounded-[6vw]" />
+            <img src="/dham/dhamVideo.jpg" className="rounded-[6vw]" />
           </div>
           <div className="h-full w-full absolute left-0 top-0">
             <img src="/icons/phone.png" alt="phone image" />

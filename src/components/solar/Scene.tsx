@@ -234,5 +234,4 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
     </>
   );
 };
-
 export default Scene;

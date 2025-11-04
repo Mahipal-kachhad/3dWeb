@@ -8,12 +8,12 @@ import axios from "axios";
 
 const VitthalbhaiBio = () => {
   const [images, setImages] = useState<{ url: string }[]>([
-    { url: "/dham/patr1.png" },
-    { url: "/dham/patr15.png" },
-    { url: "/dham/patr1.png" },
-    { url: "/dham/patr15.png" },
-    { url: "/dham/patr1.png" },
-    { url: "/dham/patr15.png" },
+    { url: "/dham/patr1.jpg" },
+    { url: "/dham/patr15.jpg" },
+    { url: "/dham/patr1.jpg" },
+    { url: "/dham/patr15.jpg" },
+    { url: "/dham/patr1.jpg" },
+    { url: "/dham/patr15.jpg" },
   ]);
 
   useEffect(() => {
