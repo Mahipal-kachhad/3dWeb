@@ -42,7 +42,7 @@ const System = () => {
   }, []);
   return (
     <>
-      <div className="h-screen w-screen fixed bg-[#000000]">
+      <div className="h-screen w-screen fixed bg-[#000000] hidden 2xl:block">
         <Loader />
         <Canvas
           gl={{
