@@ -16,6 +16,7 @@ import { VignetteHandle } from "./effects/Vignette";
 const useAnimation = (
   camera: Camera,
   earthRef: RefObject<Group>,
+  moonRef: RefObject<Mesh>,
   nebulaRef: RefObject<Group>,
   vignetteRef: RefObject<VignetteHandle>,
   plainRef: RefObject<Mesh>,
@@ -36,7 +37,8 @@ const useAnimation = (
   p3Ref: RefObject<PointLight>,
   rays1Ref: RefObject<Mesh>,
   rays2Ref: RefObject<Mesh>,
-  rays3Ref: RefObject<Mesh>
+  rays3Ref: RefObject<Mesh>,
+  backRef: RefObject<Mesh>
 ) => {
   const tl = gsap.timeline({ paused: true });
   camera.layers.enable(4);
@@ -81,6 +83,21 @@ const useAnimation = (
         }
       });
 
+      const backMaterial: Material[] = [];
+      const back = [backRef.current];
+
+      back.forEach((model) => {
+        if (model) {
+          model.traverse((child) => {
+            if (child instanceof Mesh && child.material) {
+              if (!backMaterial.includes(child.material)) {
+                backMaterial.push(child.material);
+              }
+            }
+          });
+        }
+      });
+
       gsap.set(camera, {
         fov: 30,
         near: 0.003,
@@ -103,13 +120,21 @@ const useAnimation = (
         },
         "<"
       );
+      tl.to(
+        moonRef.current.rotation,
+        {
+          y: `+=${Math.PI * 1}`,
+          duration: 4,
+          ease: "power1.in",
+        },
+        "<"
+      );
       if (vignetteRef.current?.uniforms) {
         const { vignetteStrength, vignetteShrink } =
           vignetteRef.current.uniforms;
 
         tl.set(vignetteStrength, { value: 1.0 }, "-=3");
         tl.set(vignetteShrink, { value: 0.0 }, "-=3");
-
         tl.to(
           vignetteStrength,
           {
@@ -153,7 +178,7 @@ const useAnimation = (
       }
       tl.set(amb1Ref.current, { intensity: 0 }, "-=2");
       tl.set(dir1Ref.current, { intensity: 0 }, "<");
-
+      tl.set(backMaterial, { opacity: 0 }, "<");
       tl.set(
         lookAtTarget,
         {
@@ -212,7 +237,7 @@ const useAnimation = (
       );
       tl.to(
         p3Ref.current,
-        { intensity: 0.05, ease: "power1.inOut", duration: 1 },
+        { intensity: 0.07, ease: "power1.inOut", duration: 1 },
         "<"
       );
       tl.to(
@@ -220,12 +245,51 @@ const useAnimation = (
         { intensity: 0.1, duration: 1, ease: "power1.inOut" },
         "<"
       );
-      tl.to(materials, { opacity: 1, duration: 1, ease: "power1.inOut" });
+      tl.to(materials, { opacity: 1, duration: 0.5, ease: "power1.inOut" });
       tl.to(handGlow.material, {
         opacity: 1,
         duration: 1,
         ease: "power1.in",
       });
+      tl.to(
+        [
+          rays1Ref.current.material,
+          rays2Ref.current.material,
+          rays3Ref.current.material,
+        ],
+        { opacity: 1, duration: 1, ease: "power1.inOut" },
+        "<"
+      );
+      tl.to(
+        rays1Ref.current.scale,
+        {
+          x: 0.43,
+          y: 0.43,
+          duration: 1,
+          ease: "power1.inOut",
+        },
+        "<"
+      );
+      tl.to(
+        rays2Ref.current.scale,
+        {
+          x: 0.43,
+          y: 0.43,
+          duration: 1,
+          ease: "power1.inOut",
+        },
+        "<"
+      );
+      tl.to(
+        rays3Ref.current.scale,
+        {
+          x: 0.53,
+          y: 0.53,
+          duration: 1,
+          ease: "power1.inOut",
+        },
+        "<"
+      );
       tl.set(shaktiMaterial, { opacity: 1, needsUpdate: true });
       tl.to(trishul.current.position, {
         x: -1.2,
@@ -259,11 +323,37 @@ const useAnimation = (
         { x: 0.29, y: 0.29, z: 0.29, duration: 1.5, ease: "power1.inOut" },
         "<"
       );
+      tl.to(
+        [
+          rays1Ref.current.material,
+          rays2Ref.current.material,
+          rays3Ref.current.material,
+          handGlow.material,
+        ],
+        { opacity: 0, duration: 0.3, ease: "power1.in" }
+      );
+      tl.to([p1Ref.current, p2Ref.current, p3Ref.current, dir1Ref.current], {
+        intensity: 0,
+        duration: 1,
+        ease: "power1.in",
+      });
+
+      tl.to(
+        [burst.material, circle.material, handGlow.material],
+        { opacity: 0, duration: 1, ease: "power1.in" },
+        "<"
+      );
+      tl.to(
+        shaktiMaterial,
+        { emissiveIntensity: 0, duration: 1, ease: "power1.in" },
+        "<"
+      );
     },
     {
       dependencies: [
         camera,
         earthRef,
+        moonRef,
         nebulaRef,
         vignetteRef,
         plainRef,
@@ -280,6 +370,11 @@ const useAnimation = (
         handGlowRef,
         p1Ref,
         p2Ref,
+        p3Ref,
+        rays1Ref,
+        rays2Ref,
+        rays3Ref,
+        backRef,
       ],
     }
   );

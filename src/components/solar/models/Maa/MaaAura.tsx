@@ -36,7 +36,7 @@ export const AuraCircle = ((props: JSX.IntrinsicElements["group"]) => {
           blending={THREE.AdditiveBlending}
           depthWrite={false}
           opacity={0}
-          color={"orange"}
+          color={"#E69E08"}
         />
       </mesh>
       <mesh ref={circleRef} position={[0, 0.37, -0.2]} scale={0}>
@@ -44,8 +44,9 @@ export const AuraCircle = ((props: JSX.IntrinsicElements["group"]) => {
         <meshBasicMaterial
           map={circleTexture}
           transparent={true}
+          
           opacity={0}
-          color={"orange"}
+          color={"#E69E08"}
         />
       </mesh>
     </group>

@@ -1,4 +1,3 @@
-import { Environment, OrbitControls, useHelper } from "@react-three/drei";
 import Earth from "./models/Earth";
 import Moon from "./models/Moon";
 import { useThree } from "@react-three/fiber";
@@ -25,14 +24,13 @@ import Bramha from "./models/Bramha";
 import Vishnu from "./models/Vishnu";
 import HandGlow from "./models/HandGlow";
 import Background from "./models/Background";
-import Rays1 from "./effects/Rays1";
-import Rays2 from "./effects/Rays2";
 import BlackFade from "./effects/BlackFade";
-import Rays3 from "./effects/Rays3";
+import Rays4 from "./effects/Rays4";
 
 const Scene = ({ scroller }: { scroller: DOMTarget }) => {
   const { camera } = useThree();
   const earthRef = useRef<THREE.Group>(null!);
+  const moonRef = useRef<THREE.Mesh>(null!);
   const nebulaRef = useRef<THREE.Group>(null!);
   const vignetteRef = useRef<VignetteHandle>(null!);
   const plainRef = useRef<THREE.Mesh>(null!);
@@ -54,11 +52,13 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
   const rays1Ref = useRef<THREE.Mesh>(null!);
   const rays2Ref = useRef<THREE.Mesh>(null!);
   const rays3Ref = useRef<THREE.Mesh>(null!);
+  const backRef = useRef<THREE.Mesh>(null!);
   const [isBloom, setBloom] = useState<Boolean>(false);
 
   const animationTl = useAnimation(
     camera,
     earthRef,
+    moonRef,
     nebulaRef,
     vignetteRef,
     plainRef,
@@ -79,7 +79,8 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
     p3Ref,
     rays1Ref,
     rays2Ref,
-    rays3Ref
+    rays3Ref,
+    backRef
   );
 
   useGSAP(
@@ -111,8 +112,6 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
 
   return (
     <>
-      {/* <OrbitControls /> */}
-      {/* <axesHelper args={[40]} /> */}
       <group ref={groupRef} layers={0}>
         <pointLight
           intensity={5}
@@ -124,7 +123,7 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
         <group ref={earthRef}>
           <Earth scale={0.001} rotation={[0.4, 3.47, 0]} />
         </group>
-        <Moon position={[-0.35, -0.15, 2]} scale={0.001} />
+        <Moon position={[-0.35, -0.15, 2]} scale={0.001} ref={moonRef} />
         <Son position={[0.5, 0.5, -9]} scale={1.7} />
 
         <Nebula1 position={[-9, -4, -8]} scale={13} rotation-x={0.1} />
@@ -192,36 +191,35 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
         <HandGlow
           ref={handGlowRef}
           scale={0.25}
-          position={[0.18, 0.35, 30.7]}
+          position={[0.14, 0.25, 29.7]}
           rotation-y={Math.PI}
         />
       </mesh>
-      <Rays1
+      <Rays4
         ref={rays1Ref}
-        position={[0.11, 0.11, 30.22]}
-        scale={0.4}
+        position={[0.18, 0.34, 30.71]}
+        scale={0}
         rotation={[1.1, 0, -0.12]}
       />
-      <Rays3
+      <Rays4
         ref={rays2Ref}
-        position={[-0.48, -0.02, 30.25]}
-        scale={0.75}
-        rotation={[0, Math.PI - 0.6, 0]}
+        position={[0.18, 0.34, 30.71]}
+        scale={0}
+        rotation={[0, Math.PI + 0.8, -1.25]}
       />
-      <Rays2
+      <Rays4
         ref={rays3Ref}
-        position={[0.595, 0.09, 30.28]}
-        scale={0.57}
-        rotation={[0, Math.PI + 0.8, -0.03]}
+        position={[0.18, 0.34, 30.71]}
+        scale={0}
+        rotation={[0, Math.PI - 0.6, 1.25]}
       />
 
-      {/* <Environment files={"/earth/star.hdr"} background/> */}
-      {/* <Background position={[0, 0, 0]} scale={30} ref={backRef}/> */}
-      {/* {isBloom && (
+      <Background position={[0, 0, 0]} scale={30} ref={backRef} />
+      {isBloom && (
         <EffectComposer>
           <Bloom luminanceThreshold={4} intensity={7} radius={0.7} mipmapBlur />
         </EffectComposer>
-      )} */}
+      )}
     </>
   );
 };

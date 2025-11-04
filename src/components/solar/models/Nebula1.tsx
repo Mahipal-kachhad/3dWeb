@@ -23,6 +23,7 @@ const Nebula1 = (props: JSX.IntrinsicElements["mesh"]) => {
         color={0xffffff}
         transparent={true}
         toneMapped={true}
+        alphaTest={0.1}
         side={THREE.DoubleSide}
       />
     </mesh>

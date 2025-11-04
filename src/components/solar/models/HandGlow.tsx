@@ -3,18 +3,11 @@ import * as THREE from "three";
 import { useFrame, useLoader } from "@react-three/fiber";
 
 const HandGlow = (props: JSX.IntrinsicElements["group"]) => {
-  const burstRef = useRef<THREE.Mesh>(null!);
-  const burstTexture = useLoader(THREE.TextureLoader, "/earth/Rays.png");
-
-  useFrame((_state, delta) => {
-    if (burstRef.current) {
-      burstRef.current.rotation.z -= delta * 0.1;
-    }
-  });
+  const burstTexture = useLoader(THREE.TextureLoader, "/earth/handGlow.png");
 
   return (
     <group {...props}>
-      <mesh ref={burstRef} >
+      <mesh>
         <planeGeometry args={[1, 1]} />
         <meshBasicMaterial
           map={burstTexture}

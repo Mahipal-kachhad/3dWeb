@@ -55,7 +55,7 @@ const System = () => {
           </Suspense>
         </Canvas>
       </div>
-      <div className="h-[2500vh]" ref={containerRef} id="an-trigger" />
+      <div className="h-[1500vh]" ref={containerRef} id="an-trigger" />
     </>
   );
 };
