@@ -31,11 +31,11 @@ const Pillars = () => {
         "Under the guidance of the founder of the Dham, Shri Mahapatra, here one can learn the Vedic ideology of Maa Vishvambhari, divine messages, and the art of living. This spiritual school, known as Pathshala, offers profound teachings that connect devotees with ancient wisdom and divine consciousness. Within the sacred walls of Pathshala, one experiences visions of the three realms - heavens, earth, and netherworld, witnessing the divine form of Maa Vishwambhari in her sacred chariot, accompanied by celestial beings and the eternal swing of divine love.",
       images: [
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
-        { url: "/dham/maa11.png" },
-        { url: "/dham/patr1.png" },
+        { url: "/dham/maa10.jpg" },
+        { url: "/dham/maa11.jpg" },
+        { url: "/dham/patr1.jpg" },
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
+        { url: "/dham/maa10.jpg" },
       ],
     },
     {
@@ -48,11 +48,11 @@ const Pillars = () => {
         "In a 200-foot-long Himalayan cave above the school, one can see the Sheshnag and the original Shivling moving slowly, creating an atmosphere of divine mysticism. This sacred space represents the eternal connection between earth and heaven, where devotees experience the presence of Lord Shiva in his most powerful form. The cave's natural formations and spiritual energy create an environment perfect for meditation and spiritual awakening.",
       images: [
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
-        { url: "/dham/maa11.png" },
-        { url: "/dham/patr1.png" },
+        { url: "/dham/maa10.jpg" },
+        { url: "/dham/maa11.jpg" },
+        { url: "/dham/patr1.jpg" },
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
+        { url: "/dham/maa10.jpg" },
       ],
     },
     {
@@ -65,11 +65,11 @@ const Pillars = () => {
         "In Gokuldham, the captivating view of Goverdhan Mountain lifted by Shri Krishna and the meadow of Jashoda-Nand Baba reveals the divine play of Lord Krishna. This sacred space recreates the eternal Vrindavan, where devotees can witness the divine pastimes of Krishna and experience the love between mother and child. The spiritual atmosphere transports visitors to the golden age of divine love and devotion.",
       images: [
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
-        { url: "/dham/maa11.png" },
-        { url: "/dham/patr1.png" },
+        { url: "/dham/maa10.jpg" },
+        { url: "/dham/maa11.jpg" },
+        { url: "/dham/patr1.jpg" },
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
+        { url: "/dham/maa10.jpg" },
       ],
     },
     {
@@ -82,11 +82,11 @@ const Pillars = () => {
         "Yajna is a symbol of Indian culture. Yajna is not just a religious ritual, but a Vedic way of living. The wonderful Yajnashala located here provides a sacred space for performing ancient fire ceremonies that connect the material world with the spiritual realm. These rituals purify the environment and elevate consciousness, creating harmony between nature and divinity.",
       images: [
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
-        { url: "/dham/maa11.png" },
-        { url: "/dham/patr1.png" },
+        { url: "/dham/maa10.jpg" },
+        { url: "/dham/maa11.jpg" },
+        { url: "/dham/patr1.jpg" },
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
+        { url: "/dham/maa10.jpg" },
       ],
     },
     {
@@ -99,11 +99,11 @@ const Pillars = () => {
         "Vaikunthdham represents the eternal abode of Lord Vishnu, where devotees experience divine bliss and eternal peace. This sacred space embodies the concept of Vaikuntha - the spiritual realm beyond material existence. Here, one can connect with the divine energy of Lord Vishnu and experience the ultimate goal of spiritual life.",
       images: [
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
-        { url: "/dham/maa11.png" },
-        { url: "/dham/patr1.png" },
+        { url: "/dham/maa10.jpg" },
+        { url: "/dham/maa11.jpg" },
+        { url: "/dham/patr1.jpg" },
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
+        { url: "/dham/maa10.jpg" },
       ],
     },
     {
@@ -116,11 +116,11 @@ const Pillars = () => {
         "Panchvati, the sacred grove of five trees, represents the divine forest where Lord Rama spent his exile period. This spiritual space recreates the atmosphere of ancient India, where sages and devotees lived in harmony with nature. The five sacred trees symbolize the five elements and the balance of cosmic energies.",
       images: [
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
-        { url: "/dham/maa11.png" },
-        { url: "/dham/patr1.png" },
+        { url: "/dham/maa10.jpg" },
+        { url: "/dham/maa11.jpg" },
+        { url: "/dham/patr1.jpg" },
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
+        { url: "/dham/maa10.jpg" },
       ],
     },
     {
@@ -133,11 +133,11 @@ const Pillars = () => {
         "Prakruti Van represents the natural forest environment where devotees can connect with Mother Nature and experience the divine presence in all living beings. This sacred grove teaches the importance of environmental consciousness and the interconnectedness of all life forms. It serves as a reminder of our duty to protect and preserve nature.",
       images: [
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
-        { url: "/dham/maa11.png" },
-        { url: "/dham/patr1.png" },
+        { url: "/dham/maa10.jpg" },
+        { url: "/dham/maa11.jpg" },
+        { url: "/dham/patr1.jpg" },
         { url: "/dham/maa15.jpg" },
-        { url: "/dham/maa10.png" },
+        { url: "/dham/maa10.jpg" },
       ],
     },
   ];
@@ -209,18 +209,18 @@ const Pillars = () => {
             initialSlide: 1,
           },
         }}
-        className="!pt-14 !pb-7 lg:!pt-22 lg:!pb-10"
+        className="pt-14! pb-7! lg:pt-22! lg:pb-10!"
       >
         {pillarsContent.map((val) => (
           <SwiperSlide
             key={val.id}
-            className="!w-[320px] lg:!w-[350px] rounded-3xl aspect-70/44 lg:aspect-70/47 bg-black relative"
+            className="w-[320px]! lg:w-[350px]! rounded-3xl aspect-70/44 lg:aspect-70/47 bg-black relative"
           >
             <div className="p-6 lg:p-7">
               <img
                 src={val.icon}
                 alt={`${val.title} icon`}
-                className="block h-[35px] lg:h-[40px]"
+                className="block h-[35px] lg:h-10"
               />
               <h3 className="font-bold text-xl lg:text-2xl mt-3 lg:mt-5 mb-1">
                 {val.title}

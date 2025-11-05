@@ -41,10 +41,10 @@ const Footer = () => {
                 <img src="/icons/youtube.svg" alt="social media" />
               </a>
               <a href="https://www.instagram.com/mvtydham/" target="_blank">
-                <img src="/icons/instagram.svg" alt="social media" />
+                <img src="/icons/insta.svg" alt="social media" />
               </a>
               <a href="https://www.facebook.com/MVTYDham/" target="_blank">
-                <img src="/icons/facebook.svg" alt="social media" />
+                <img src="/icons/face.svg" alt="social media" />
               </a>
             </div>
           </div>

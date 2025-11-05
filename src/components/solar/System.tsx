@@ -50,7 +50,7 @@ const System = () => {
             outputColorSpace: THREE.SRGBColorSpace,
           }}
         >
-          <Suspense fallback={null}>
+          <Suspense fallback={<mesh></mesh>}>
             <Scene scroller={containerRef.current} />
           </Suspense>
         </Canvas>

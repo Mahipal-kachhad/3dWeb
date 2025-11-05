@@ -154,7 +154,7 @@ const Events = () => {
                                 target="_blank"
                               >
                                 <img
-                                  src="/icons/instagram.svg"
+                                  src="/icons/insta.svg"
                                   alt="social media"
                                 />
                               </a>
@@ -163,7 +163,7 @@ const Events = () => {
                                 target="_blank"
                               >
                                 <img
-                                  src="/icons/facebook.svg"
+                                  src="/icons/face.svg"
                                   alt="social media"
                                 />
                               </a>

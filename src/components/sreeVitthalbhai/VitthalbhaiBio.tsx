@@ -14,6 +14,12 @@ const VitthalbhaiBio = () => {
     { url: "/dham/patr15.jpg" },
     { url: "/dham/patr1.jpg" },
     { url: "/dham/patr15.jpg" },
+    { url: "/dham/patr1.jpg" },
+    { url: "/dham/patr15.jpg" },
+    { url: "/dham/patr1.jpg" },
+    { url: "/dham/patr15.jpg" },
+    { url: "/dham/patr1.jpg" },
+    { url: "/dham/patr15.jpg" },
   ]);
 
   useEffect(() => {

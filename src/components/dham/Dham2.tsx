@@ -16,6 +16,7 @@ const Dham2 = () => {
     { url: "/dham/maa15.jpg" },
     { url: "/dham/maa11.jpg" },
     { url: "/dham/maa10.jpg" },
+    
   ]);
 
   useEffect(() => {
@@ -93,6 +94,7 @@ const Dham2 = () => {
                 direction="vertical"
                 slidesPerView={2}
                 spaceBetween={18}
+                speed={700}
                 className="h-[50vw]"
               >
                 {images.map((img, idx) => (

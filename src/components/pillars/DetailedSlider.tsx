@@ -22,7 +22,7 @@ const Slider = ({ images }: { images: { url: string }[] }) => {
           {images.map((img, idx) => (
             <SwiperSlide
               key={idx}
-              className="!w-[300px] lg:!w-[500px] !h-fit cursor-grab active:cursor-grabbing"
+              className="w-[300px]! lg:w-[500px]! h-fit! cursor-grab active:cursor-grabbing"
             >
               <div className="bg-black">
                 <img
@@ -33,8 +33,8 @@ const Slider = ({ images }: { images: { url: string }[] }) => {
               </div>
             </SwiperSlide>
           ))}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r hidden sm:block from-black to-transparent z-10"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l hidden sm:block from-black to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-linear-to-r hidden sm:block from-black to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-linear-to-l hidden sm:block from-black to-transparent z-10"></div>
           <button
             onClick={() => swiperRef.current?.swiper.slidePrev()}
             className="absolute top-1/2 -translate-y-1/2 left-4 z-10 w-10 h-10 rounded-full bg-white/80 text-black flex items-center justify-center  transition-all opacity-0 group-hover:opacity-100"

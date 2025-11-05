@@ -17,6 +17,11 @@ const DhamInfo = () => {
     { url: "/dham/maa15.jpg" },
     { url: "/dham/maa11.jpg" },
     { url: "/dham/maa10.jpg" },
+    { url: "/dham/maa10.jpg" },
+    { url: "/dham/maa11.jpg" },
+    { url: "/dham/maa15.jpg" },
+    { url: "/dham/maa11.jpg" },
+    { url: "/dham/maa10.jpg" },
   ]);
 
   useEffect(() => {
@@ -109,6 +114,7 @@ const DhamInfo = () => {
               direction="vertical"
               spaceBetween={20}
               slidesPerView={2}
+              speed={700}
               className="rounded-2xl h-full"
             >
               {images.map((img, idx) => (

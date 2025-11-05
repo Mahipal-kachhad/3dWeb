@@ -15,6 +15,14 @@ const BlurSlider = () => {
     { url: "/dham/patr9.jpg" },
     { url: "/dham/patr10.jpg" },
     { url: "/dham/patr1.jpg" },
+    { url: "/dham/patr15.jpg" },
+    { url: "/dham/maa10.jpg" },
+    { url: "/dham/maa11.jpg" },
+    { url: "/dham/maa15.jpg" },
+    { url: "/dham/patr8.jpg" },
+    { url: "/dham/patr9.jpg" },
+    { url: "/dham/patr10.jpg" },
+    { url: "/dham/patr1.jpg" },
   ]);
 
   useEffect(() => {
