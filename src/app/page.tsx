@@ -17,14 +17,16 @@ import Quotes from "@/components/quotes/Quotes";
 import SreeVitthalbhai from "@/components/sreeVitthalbhai/SreeVitthalbhai";
 import VitthalbhaiBio from "@/components/sreeVitthalbhai/VitthalbhaiBio";
 import { Toaster } from "react-hot-toast";
+import Entry from "@/components/3d/Entry";
 
 export default function Home() {
   return (
     <>
       <div className="hidden 2xl:block">
-        <System />
+        {/* <System /> */}
+        <Entry />
       </div>
-      <div className="bg-[#1D1D1F] min-h-screen 2xl:hidden">
+      {/* <div className="bg-[#1D1D1F] min-h-screen 2xl:hidden">
         <AboutMVTY />
         <MaaVishvambhari />
         <GlimpsOfMaa />
@@ -42,7 +44,7 @@ export default function Home() {
         <Contact />
         <Footer />
         <Toaster position="top-center" reverseOrder={false} />
-      </div>
+      </div> */}
     </>
   );
 }

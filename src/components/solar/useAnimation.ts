@@ -363,9 +363,9 @@ const useAnimation = (
     }
   );
 
-  useFrame(() => {
-    camera.lookAt(lookAtTarget);
-  });
+  // useFrame(() => {
+  //   camera.lookAt(lookAtTarget);
+  // });
 
   return tl;
 };

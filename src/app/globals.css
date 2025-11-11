@@ -11,10 +11,10 @@
     --foreground: #ededed;
   }
 }
-
+/* 
 html::-webkit-scrollbar {
   display: none;
-}
+} */
 
 body {
   background: var(--background);

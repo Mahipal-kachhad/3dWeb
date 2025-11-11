@@ -25,17 +25,23 @@ const DhamInfo = () => {
   ]);
 
   useEffect(() => {
-    axios
-      .get("https://dhamadmin.cesihpl.com/edit_dham_image.php?action=list")
-      .then((data: any) => {
-        setImages(
-          data.data.images[0].sub_images.map((val: any) => {
-            return {
-              url: `https://dhamadmin.cesihpl.com/${val.url}`,
-            };
-          })
+    const fetchImages = async () => {
+      try {
+        const { data } = await axios.get(
+          "https://dhamadmin.cesihpl.com/edit_dham_image.php?action=list"
         );
-      });
+
+        const formattedImages = data.images[0].sub_images.map((val: any) => ({
+          url: `https://dhamadmin.cesihpl.com/${val.url}`,
+        }));
+
+        setImages(formattedImages);
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+
+    fetchImages();
   }, []);
 
   const [isOpen, setIsOpen] = useState(false);

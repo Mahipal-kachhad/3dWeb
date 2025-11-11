@@ -27,6 +27,8 @@ import Background from "./models/Background";
 import BlackFade from "./effects/BlackFade";
 import Rays from "./effects/Rays";
 import { useRouter } from "next/navigation";
+import Galaxy from "./models/Galaxy/Galaxy";
+import { OrbitControls } from "@react-three/drei";
 
 const Scene = ({ scroller }: { scroller: DOMTarget }) => {
   const { camera } = useThree();
@@ -83,7 +85,7 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
     rays1Ref,
     rays2Ref,
     rays3Ref,
-    backRef,
+    backRef
   );
 
   useGSAP(
@@ -98,14 +100,14 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
         scrub: 1.5,
         start: "top top",
         end: "bottom bottom",
-        onUpdate: (self) => {
-          if (self.progress > 0.99 && !hasNavigated.current) {
-            hasNavigated.current = true;
-            setTimeout(() => {
-              router.push("/dham");
-            }, 500);
-          }
-        },
+        // onUpdate: (self) => {
+        //   if (self.progress > 0.99 && !hasNavigated.current) {
+        //     hasNavigated.current = true;
+        //     setTimeout(() => {
+        //       router.push("/dham");
+        //     }, 500);
+        //   }
+        // },
       });
 
       ScrollTrigger.create({
@@ -121,6 +123,7 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
 
   return (
     <>
+      <OrbitControls />
       <group ref={groupRef} layers={0}>
         <pointLight
           intensity={5}
