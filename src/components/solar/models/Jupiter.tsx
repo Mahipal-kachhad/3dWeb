@@ -4,7 +4,6 @@ import { Mesh, MeshStandardMaterial } from "three";
 
 const Jupiter = (props: JSX.IntrinsicElements["mesh"]) => {
   const { scene } = useGLTF("/earth/jupiter.glb");
-  console.log(scene);
   useEffect(() => {
     scene.traverse((child) => {
       if (child instanceof Mesh && child.material) {

@@ -16,6 +16,8 @@ import Earth from "@/components/solar/models/Earth";
 import Jupiter from "@/components/solar/models/Jupiter";
 import Saturn from "@/components/solar/models/Saturn";
 import Galaxy from "./Galaxy/Galaxy";
+import Nebula1 from "@/components/solar/models/Nebula1";
+import Nebula2 from "@/components/solar/models/Nebula2";
 
 const Experience = ({ scroller }: { scroller: DOMTarget }) => {
   const galaxyRef = useRef<THREE.Group>(null!);
@@ -23,9 +25,7 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
 
   const { camera } = useThree();
 
-  const animationTl = useAnimation(
-    camera
-  );
+  const animationTl = useAnimation(camera);
 
   useGSAP(
     () => {
@@ -47,7 +47,7 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
         scroller: scroller,
 
         start: "0 center",
-        end: "27% center",
+        end: "100% center",
 
         onToggle: (self) => setBloom(self.isActive),
       });
@@ -57,9 +57,9 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
 
   return (
     <>
-      {/* <OrbitControls rotateSpeed={0.1} /> */}
-      <ambientLight/>
-      <group layers={1}>
+      <OrbitControls rotateSpeed={0.1} />
+      <ambientLight />
+      <group>
         <Galaxy
           ref={galaxyRef}
           position={[-2.9, -2.9, 14]}
@@ -69,8 +69,8 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
         />
       </group>
       <Earth scale={0.0007} position={[0, 0, 9]} />
-      <Jupiter position={[-0.4, 0, 8]} scale={0.1}  />
-      <Saturn position={[0.4, 0, 7]} scale={0.05} rotation={[0.5, 0, 0]}/>
+      <Jupiter position={[-0.4, 0, 8]} scale={0.1} />
+      <Saturn position={[0.4, 0, 7]} scale={0.05} rotation={[0.5, 0, 0]} />
       <EffectComposer>
         {isBloom && (
           <EffectComposer resolutionScale={0.5}>

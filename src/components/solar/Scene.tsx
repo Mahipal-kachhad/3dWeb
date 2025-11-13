@@ -123,7 +123,7 @@ const Scene = ({ scroller }: { scroller: DOMTarget }) => {
 
   return (
     <>
-      <OrbitControls />
+      {/* <OrbitControls /> */}
       <group ref={groupRef} layers={0}>
         <pointLight
           intensity={5}

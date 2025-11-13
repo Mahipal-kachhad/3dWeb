@@ -23,8 +23,8 @@ export default function Home() {
   return (
     <>
       <div className="hidden 2xl:block">
-        {/* <System /> */}
-        <Entry />
+        <System />
+        {/* <Entry /> */}
       </div>
       {/* <div className="bg-[#1D1D1F] min-h-screen 2xl:hidden">
         <AboutMVTY />
